@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "orders": {
+      "title": "Orders",
+      "description": "Client orders for bookings, products, and academy registrations",
+      "properties": {
+        "clientName": { "type": "string" },
+        "clientEmail": { "type": "string" },
+        "clientPhone": { "type": "string" },
+        "clientWhatsapp": { "type": "string" },
+        "itemTitle": { "type": "string" },
+        "itemType": { "type": "string" },
+        "amount": { "type": "number" },
+        "location": { "type": "string" },
+        "date": { "type": "string" },
+        "notes": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["clientName", "itemTitle", "itemType"]
+    },
+    "clients": {
+      "title": "Clients",
+      "description": "Directory of clients and contact inquiries",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "notes": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name"]
+    },
+    "products": {
+      "title": "Products",
+      "description": "Boutique product catalog",
+      "properties": {
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "category": { "type": "string" },
+        "image": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "required": ["name", "price"]
+    },
+    "articles": {
+      "title": "Articles",
+      "description": "Blog posts, styling guides, and beauty insights",
+      "properties": {
+        "title": { "type": "string" },
+        "category": { "type": "string" },
+        "excerpt": { "type": "string" },
+        "content": { "type": "string" },
+        "date": { "type": "string" },
+        "readTime": { "type": "string" },
+        "image": { "type": "string" },
+        "author": { "type": "string" }
+      },
+      "required": ["title", "content"]
+    },
+    "testimonials": {
+      "title": "Testimonials",
+      "description": "Client reviews and video testimonials showcase",
+      "properties": {
+        "name": { "type": "string" },
+        "role": { "type": "string" },
+        "text": { "type": "string" },
+        "stars": { "type": "number" },
+        "image": { "type": "string" },
+        "isVideo": { "type": "boolean" },
+        "videoThumbnail": { "type": "string" },
+        "videoUrl": { "type": "string" }
+      },
+      "required": ["name", "stars"]
+    }
+  }
+}
